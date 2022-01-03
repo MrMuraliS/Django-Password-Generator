@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+    {% block Title %}
+Home Page
+    {% endblock %}
+
+
+{% block body_block %}
+    <form method="POST">
+        {% csrf_token %}
+        {{home_form.as_p}}
+<!--        <button type="submit" class="btn btn-primary">Submit</button>-->
+        <input type="submit" class="btn btn-primary" value="Generate Password">
+    </form>
+{% endblock %}
